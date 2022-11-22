@@ -29,7 +29,7 @@ public class SetupSpawner : MonoBehaviour
 
                 float3 position = new float3(x * spread, 0, z * spread);
                 entityManager.SetComponentData(instance, new Translation { Value = position });
-                //entityManager.SetComponentData(instance, new Destination { value = position });
+                entityManager.SetComponentData(instance, new Destination { value = position });
                 float speed = UnityEngine.Random.Range(speedRange.x , speedRange.y);
                 entityManager.SetComponentData(instance, new MovementSpeed { value = speed });
             }
